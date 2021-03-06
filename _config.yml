@@ -27,6 +27,16 @@ url: "https://babywalnut.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  babywalnut
 
+# author is default for posts, the Atom feed, and is used in the footer
+author: Bobby
+instagram_username: public_character
+
+# New fields not defaulted by jekyll-new with the minima theme
+# Add a copyright. A copyright symbol and year will be added automatically
+# copyright: Company Name, Inc.
+copyright: "Babywalnut LLC"
+
+title-logo: /images/title-logo.png
 # Build settings
 # Removed minima theme as it is now a regular theme.
 # theme: minima

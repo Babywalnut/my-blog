@@ -1,1 +1,1 @@
-# my-blog
+# Bobby 블로그

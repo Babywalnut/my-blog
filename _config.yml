@@ -21,7 +21,7 @@
 title: Babywalnut
 email: anfuza@likelion.org
 description: >- # this means to ignore newlines until "baseurl:"
- Babywalnut's Tech Blog
+              Babywalnut's Tech Blog. 
 baseurl: "/my-blog" # the subpath of your site, e.g. /blog
 url: "https://babywalnut.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 

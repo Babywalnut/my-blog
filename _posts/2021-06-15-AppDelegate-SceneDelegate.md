@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[iOS] AppDelegate & SceneDelegate[1]"
+title:  "[iOS] AppDelegate & SceneDelegate"
 date:   2021-06-15 2:52:50 +0900
 categories: iOS
 tags: [iOS, AppDelegate, SceneDelegate, lifeCycle, 생명주기]

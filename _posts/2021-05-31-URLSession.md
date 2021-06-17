@@ -2,8 +2,8 @@
 layout: post
 title:  "[iOS] URLSession"
 date:   2021-05-31 10:52:50 +0900
-categories: 클로져
-tags: [URLSession, network]
+categories: iOS
+tags: [iOS, URLSession, network]
 ---
 
 ## **URLSession이란?**

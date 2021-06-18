@@ -135,6 +135,12 @@ func sceneDidEnterBackground(_ scene: UIScene)
 * **마지막 메서드**는 scene이 앱으로부터 disconnect될 때 호출됩니다.(재연결 가능)<br><br>
 해당 메서드는 위에 설명한 AppDelegate의 세번째 메서드 설명을 보면 더 이해할 수 있습니다.
 
+
 <br><br>
-**포스팅을 하는 시점에서 개발하는 앱마다 SceneDelegate를 활용할수도 있고 안할수도 있습니다.<br> iOS 13버전을 최소버전으로 사용하라면 SceneDelegate를 활용할것이고 아니라면 이전의 AppDelegate만 활용할 것입니다.<br>때문에 AppDelegate만 활용하고 싶은 경우에는 SceneDelgate.swift파일을 삭제하고 이관된 메서드를 다시 AppDelegate에 구현하면 됩니다.**
+**정리하자면.. IOS 13버전 이전에는 AppDelegate에서 앱과 UI 생명주기를 모두 관리했지만**
+**13버전 이후에는 UI의 생명주기는 SceneDelegate로 이관되었고 생명주기 또한 변경되었습니다.**
+**window개념이  scene으로 대체되었고 AppDelegate에서는 Scene을 추적하는 Scene Session에 관련된 메서드가 추가되었습니다.**
+
+<br><br>
+**포스팅을 하는 시점에서 개발하는 앱마다 SceneDelegate를 활용할수도 있고 안할수도 있습니다.<br> iOS 13버전을 최소버전으로 사용하라면 SceneDelegate를 활용할것이고 아니라면 이전의 AppDelegate만 활용할 것입니다.<br>때문에 AppDelegate만 활용하고 싶은 경우에는 SceneDelgate.swift파일을 삭제하고 이관된 메서드를 다시 AppDelegate에 구현하면 됩니다.<br>그렇게되면 생명주기 역시 이전의 생명주기를 따르게 됩니다.**
 

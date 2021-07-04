@@ -25,7 +25,7 @@ AppDelegate와 SceneDelegate의 역할과 용도에 대해 헷갈리는 부분�
 
 <img width="756" alt="스크린샷 2021-06-15 오후 6 03 01" src="https://user-images.githubusercontent.com/56648865/122025025-f379c680-ce03-11eb-9b9b-bf7d8ad65e5e.png">
 
-iOS 13 이전 버전에서는 AppDelegate만을 사용하여 앱의 시작과 forground, background와 같은 앱의 상태에 관련된 로직들을 다뤘습니다. 
+iOS 13 이전 버전에서는 AppDelegate만을 사용하여 앱의 생명주기와 UI의 생명주기에 관련된 로직들을 모두 다뤘습니다. 
 
 <img width="871" alt="스크린샷 2021-06-15 오후 6 04 17" src="https://user-images.githubusercontent.com/56648865/122025194-1e641a80-ce04-11eb-934d-4a695a683689.png">
 
@@ -34,7 +34,7 @@ iOS 13 이후 버전부터는 AppDelegate가 혼자서 맡던 역할이 AppDeleg
 이로인하여 iPad OS 에서는 multi-window를 구현할 수 있게 되었습니다.
 
 ```
-AppDelegate는 앱의 생명주기를 관리하고 SceneDelegatesms 앱에서 스크린에 표시되어지는 UI의 생명주기를 관리합니다.
+iOS 13 이후부터는 AppDelegate는 앱의 생명주기를 관리하고 SceneDelegatesms 앱에서 스크린에 표시되어지는 UI의 생명주기를 관리합니다.
 ```
 
 <br><br>
@@ -56,7 +56,7 @@ iOS 13에서도 여전히 AppDelegate는 앱의 시작점을 맡고있습니다.
 등이 가능합니다.
 <br><br>
 
-AppDelegate.swift의 default형식에는 3개의 메서드가 정의되어 있고 매주 중요한 역할을 하고 있습니다.
+AppDelegate.swift의 default형식에는 3개의 메서드가 정의되어 있고 매우 중요한 역할을 하고 있습니다.
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
@@ -67,28 +67,32 @@ func application(_ application: UIApplication, didDiscardSceneSessions sceneSess
 ```
 <br>
 
-* **첫번째 메서드**는 구현중인 앱이 실행되면서 앱의 셋업이 완료되었을때만 호출됩니다. <br><br>
+* **첫번째 메서드**는 구현중인 앱이 처음 실행되면서 앱의 셋업이 완료되었을때만 호출됩니다. <br><br>
 iOS 13 이전 버전에서는 UIWindow 객체를 구성하고 해당 UIWindow에 뷰컨트롤러를 할당하여 <br><br>
 화면에 보여지게하기 위해서도 사용해왔습니다.<br><br>
-iOS 13 이후 버전부터는 앱이 Scene을 가지고있다면 해당 메서드는 더이상 관여하지않고 SceneDelegate가 관리하게 됩니다.<br><br>
+iOS 13 이후 버전부터는 앱이 Scene을 가지고있다면 해당 메서드는 더이상 해당 이벤트에 관여하지않고 SceneDelegate가 관리하게 됩니다.<br><br>
 ![스크린샷 2021-06-17 오후 11 26 44](https://user-images.githubusercontent.com/56648865/122416251-8ad94800-cfc3-11eb-8ec4-1561f148cb0e.png)<br><br>
-또한 해당 메서드가 반환하는 true는 해당 메서드에 명시되어 있는 조건을 만족하면 앱이 실행될 수 있다는 것을 뜻합니다.<br><br>
+위와 같이 메서드가 반환하는 true는 해당 메서드에 명시되어 있는 조건을 만족하면 앱이 실행될 수 있다는 것을 뜻합니다.<br><br>
 하지만 때에 따라 false를 통해 앱을 실행시켜주지 않을 수도 있습니다.
 
 <br>
-* **두번째 메서드**는 사용자나 시스템이 새로운 Scene이나 새로운 Window가 생성했을때 호출됩니다. <br><br>
-해당 메서드로 Scene이 만들어졌을 때 전달 받는 scene session은 scene에 관련된 모든 정보를 추적합니다. <br><br>
-
+* **두번째 메서드**는 사용자나 시스템이 새로운 Scene을 생성했을때 호출됩니다. <br><br>
+해당 메서드로 Scene이 만들어졌을 때 전달 받는 scene session은  Scene에 관련된 모든 정보를 추적합니다. <br><br>
+즉, 해당 Scene에 대한 어떤 SceneDelegate를 사용하는지, 어떤 Storyboard를 사용하는지, 필요에따라 어떤 Scene subclass를 사용하는지 등 Scene의 여러 Configuration을 설정합니다.<br><br>
+<img width="1276" alt="스크린샷 2021-06-20 오후 12 54 25" src="https://user-images.githubusercontent.com/56648865/122661566-a82a3400-d1c6-11eb-863f-06ca427289dc.png"><br><br>
+Configuration을 설정하는 것을 info.plist를 통하여 정적으로 설정할 수도 있고 해당 메서드내에 동적으로 코드를 구현할 수도 있습니다.<br><br>
+만약 info.plist에 구현했다면 위의 코드와 같이 인자로 받아오는 값을 return값에 넣어주면 간단하게 설정할 수 있습니다.
 
 <br>
 * **세번째 메서드**는 유저가 app switcher를 통하여 Scene을 닫을 때 호출됩니다.<br><br>
-해당 Scene이 사용하던 자원이 더 이상 필요하지 않아 처리할 때 사용됩니다. <br><br>
-해당 메서드와 단지 Scene과의 연결을 끊고 완전히 제거하지는 않는 `sceneDidDisconnet(_:)`메서드와는 확실히 구분해야합니다.<br><br>
-`sceneDidDisconnet(_:)`메서드가 Scene을 disconnect하고 재연결할때 재연결하려는 마지막 순간을 이 메서드를 호출하여 마킹해놓기도 합니다.<br><br>
-하지만 시스템이 메모리를 확보하기 위해서 Scene을 닫을경우에는 호출되지 않습니다.
+해당 메서드와 단지 Scene과의 연결을 끊고 Scene과 관련된 메모리를 해제시키지만 user data나 state를 영구적으로 제거하지않는 `sceneDidDisconnet(_:)`메서드와는 확실히 구분해야합니다.<br><br>
+`sceneDidDisconnet(_:)`메서드는 Scene을 disconnect하고 나중에 reconnect시킬 수 있습니다..<br><br>
+하지만 discard메서드는 영구적으로 Scene의 user data 나 State를 완전히 제거합니다.(저장되지않은 텍스트편집기 앱의 초안(draft)같은)<br><br>
+여기서 특이한 점은 앱이 `Not running`상태에서 discard메서드가 호출되면 앱의 마지막 상태를 추적해놨다가 나중에 다시 실행시킬 때 마지막 상태를 불러오게됩니다.<br>
+(해당 기능은 stateRestoration과 관련되어있는데 추후 설명하겠습니다.)
 
 <br>
-이외에도 여전히 AppDelegate는 이외에 notification push 등록, 위치서비스, 앱 삭제 와 같은 서비스들을 다룹니다.
+
 
 <br><br>
 #### **SceneDelegate**
@@ -120,7 +124,7 @@ func sceneDidEnterBackground(_ scene: UIScene)
 <br>
 
 * **첫번째 메서드**는 UISceneSession 생명주기에서 첫번째로 호출되는 메서드입니다. <br><br>
-이 메서드는 새로운 UIWindow를 만들고 root view con†roller를 설정해주고 디스플레이에 보여질 key window로 설정합니다.<br><br>
+이 메서드는 새로운 UIWindow를 만들고 root view controller를 설정해주고 디스플레이에 보여질 key window로 설정합니다.<br><br>
 
 <br>
 * **두번째 메서드**는 앱이 실행될때 즉, 처음으로 앱이 active상태에 돌입할때나 backgound에서 foreground상태로 넘어올 때 호출됩니다.<br><br>

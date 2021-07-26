@@ -111,3 +111,5 @@ Stack view의 `fitting size`처럼 baseline도 Stackview가 포함하는 view들
 
 <br>
 <span style="color:red">**Baseline alignment는 view 자체가 가지고 있는 `intrinsic height`에 의해 height 이 결정되는 view에만 적용이 됩니다. 만약 view가 다른 요소에 의하여 늘어나고 줄어들게 된다면 baseline은 잘못된 위치에 나타나게 될 것입니다.**<span>
+
+

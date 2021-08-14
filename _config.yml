@@ -42,6 +42,9 @@ title-logo: /images/title-logo.png
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+paginate: 10
+paginate_path: "my-blog/page/:num/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

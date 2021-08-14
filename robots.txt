@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://jinyongjeong.github.io/sitemap.xml
+Sitemap: https://babywalnut.github.io/my-blog/sitemap.xml

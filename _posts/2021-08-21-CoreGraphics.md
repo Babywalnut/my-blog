@@ -82,4 +82,28 @@ graphics context에는 bitmap graphics context, PDF graphics context, window gra
 <br><br>
 ## **Quartz 2D Coordinate Systems**
 
-Quartz는 고유의 `coordinate system` 즉 좌표계를 가지고 있다.
+Quartz는 그래픽을 생성할 때 고유의 `coordinate system` 즉 좌표계를 통해 위치와 사이즈를 나타냅니다.
+
+이 좌표계는 실수 좌표로 이루어져 있습니다.
+
+<br>
+<p align="center"><img width="300" alt="e3663268-5db4-42c9-a7f0-2114920a9f1f" src="https://user-images.githubusercontent.com/56648865/129443904-6710a6a7-6904-4c33-b630-3bd24dcd7be7.gif"></p>
+
+
+그래픽을 출력하게 되는 기기마다 display의 크기가 다르기 때문에 그래픽의 좌표를 device단에서 설정하게되면 기기마다 다르게 설정해줘야하는 번거로움이 있습니다.
+
+때문에 Quartz는 그래픽을 device와 독립된 **user space**에 좌표계를 생성하고 각 기기의 **device space** 좌표계로 `current transformation matrix` 나 `CTM`을 통하여 맵핑을 시킵니다.
+
+`current transformation matrix`라는 일종의 좌표를 이동(평행이동, 회전 등)시킬 수 있는 행렬을 좌표에 곱하여 기존의 좌표를 이동시킵니다.
+
+다라서 그려질 좌표는 인식하되 실질적으로 그려지기 전에 기존의 Quartz좌표계에 보이는 이미지를 그리는 것이 아닌 각 device에 그려질 이미지로 변환하여 그려지게 됩니다.
+
+UIKit도 고유의 좌표계를 가지기 때문에 마찬가지로 Quartz의 좌표계에 그려질 그래픽을 UIkit좌표계에 맞게 변형시킨 drawing contexts인 UIView를 활용하게 됩니다.
+
+<br>
+<p align="center"><img width="700" alt="e3663268-5db4-42c9-a7f0-2114920a9f1f" src="https://user-images.githubusercontent.com/56648865/129444074-0fe5ecce-e81f-4a61-8020-344fad522724.jpeg"></p>
+
+
+위의 그래프와 같이 UIKit을 통하여 그려질 때는 Quartz좌표계에서 y 축의 양의 방향이 반대로 되어 좌표를 인식하게 됩니다.
+
+**이외에도 문서에는 Quartz의 graphics contxt에 따라 사용되는 Opaque Data Types, Quartz의 메모리 관리 방식, Quartz를 통해 완성된 객체를 수정할 수 있는 Graphics States에 관한 설명이 있습니다.**

@@ -23,7 +23,7 @@ email: anfuza@likelion.org
 description: >- # this means to ignore newlines until "baseurl:"
               Babywalnut's Tech Blog. 
 baseurl: "/my-blog" # the subpath of your site, e.g. /blog
-url: "https://babywalnut.github.io/my-blog" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://babywalnut.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  babywalnut
 
@@ -39,12 +39,12 @@ copyright: "Babywalnut LLC"
 title-logo: /images/title-logo.png
 # Build settings
 # Removed minima theme as it is now a regular theme.
-# theme: minima
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
-paginate: 10
-paginate_path: "my-blog/page/:num/"
+paginate: 30
+paginate_path: "/blog/page:num/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

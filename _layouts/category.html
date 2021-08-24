@@ -1,27 +1,20 @@
 ---
 layout: default
 ---
-<div class="page clearfix">
-    <div class="left">
-      <h1>{{page.title}}</h1>
-      <hr>
-      <ul>
-        {% for category in site.categories %}
-          <h2 id="{{category | first}}">{{category | first}}</h2>
-          {% for posts in category %}
-            {% for post in posts %}
-              {% if post.url %}
-                <li>
-                  <time>
-                    {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
-                  </time>
-                  <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+<div class="catalogue">
+  <h1 class="category-title"><a href="/category/{{ page.title }}">{{ page.category }}</a></h1>
+  {% assign cate = page.category | default: page.title %}
+  {% for post in site.categories[ cate ] %}
+  <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <div>
+          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+          <h1 class="catalogue-title">{{ post.subject | upcase }} {{ post.title }}</h1>
+          <h4 class="catalogue-desc">{{ post.description }}</h4>
+          <div class="catalogue-line"></div>
+          <p class="catalogue-content">{{ post.content | strip_html | truncatewords: 30 }}</p>
+      </div>
+  </a>
+  {% endfor %}
+</div>
+  
   

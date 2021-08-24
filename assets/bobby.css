@@ -1,0 +1,20 @@
+/* .parent {
+    height: 500px;
+    flex-direction: column;
+} */
+
+.bobby {
+    list-style-type: none;
+    float: left;
+    outline: 1px;
+    margin-left: 20px;
+    /* box-sizing: content-box; */
+    /* width: 500px; */
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 20%;
+}
+
+html {
+    scroll-behavior: smooth;
+}

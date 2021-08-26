@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "[iOS] URLSession"
 date:   2021-05-31 10:52:50 +0900
 categories: iOS

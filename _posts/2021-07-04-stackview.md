@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "[iOS] UIStackView"
 date:   2021-07-04 2:52:50 +0900
 categories: iOS

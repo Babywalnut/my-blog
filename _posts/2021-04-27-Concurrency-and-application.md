@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "[Swift] 동시성 프로그래밍"
+title:  "[iOS] 동시성 프로그래밍"
 date:   2021-04-27 10:52:50 +0900
-categories: 스위프트
+categories: iOS
 tags: [ Swift API GuideLines ]
 ---
 

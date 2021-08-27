@@ -8,6 +8,15 @@ categories:
 tags: [Deployment target, xcode]
 ---
 
+이번 포스팅에서는 iOS 프로젝트 생성시 앱의 최소 버전을 12이하로 설정하는 법에 대해 적어보겠습니다.
+
+<span style="color:gray">참고자료 : <br></span><a href ="https://sarunw.com/posts/create-new-ios12-project-in-xcode11/" style="color:darkgreen"><U>Create a new iOS12 project in Xcode11</U></a>
+
+<br>
+
+iOS 12 이후부터는 앱의 생명주기와 UI의 생명주기가 달라지므로 더 낮은 버전을 사용하고 싶을 때는 수정해줘야 하는 부분이 있습니다. 
+
+생명주기에 대해서는  <a href ="https://babywalnut.github.io/my-blog/ios/AppDelegate-SceneDelegate/" style="color:gray"><U>[iOS] AppDelegate & SceneDelegate</U></a>에서 확인하시면 됩니다.
 
 
 ## **Deplyment Target 수정**

@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : ""
+title                    : "Babywalnut"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Bobby"
@@ -24,8 +24,8 @@ description              : "An amazing website."
 url                      : "https://babywalnut.github.io"
 baseurl                  : "/my-blog"
 repository               : "Babywalnut/bobby-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/favicon2.png"
-logo                     : "/assets/logo/bobby.jpg"
+teaser                   : "/assets/logo/bobbylogo.png"
+logo                     : "/assets/logo/bobbylogo.png"
 masthead_title           : ""
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -102,8 +102,8 @@ analytics:
 # Site Author
 author:
   name             : "Bobby"
-  avatar           : "/assets/logo/umbrella.jpg"
-  bio              : "원리를 파악하고 지식을 넓히는 것이 즐겁습니다 🚀"
+  avatar           : "/assets/logo/bobby-WWDC2020.png"
+  bio              : "원리를 파악하고 지식을 넓히는 것을 즐깁니다 🚀"
   location         : "Seoul, South Korea"
   email            :
   links:
@@ -283,6 +283,7 @@ defaults:
     values:
       sidebar:
         # nav: "docs"
+      show_date: true
       layout: single
       author_profile: true
       read_time: true

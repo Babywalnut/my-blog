@@ -4,6 +4,11 @@ title:  "[iOS] UIStackView"
 date:   2021-07-04 2:52:50 +0900
 categories: iOS
 tags: [UI, StackView, UIView]
+toc: true
+toc_sticky: true
+header:
+  overlay_image: /images/background3.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 이번 포스팅은 여러개의 View들을 행으로 정렬하거나 열로써 정렬하여 효과적으로 관리하는 Interface인 

@@ -2,10 +2,14 @@
 layout: single
 title:  "[iOS] Xcode 11에서 iOS 12 이하 버전 생성하기"
 date:   2021-08-24 2:54:50 +0900
-classes: wide
 categories: 
   - iOS
 tags: [Deployment target, xcode]
+toc: true
+toc_sticky: true
+header:
+  overlay_image: /images/background3.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 이번 포스팅에서는 iOS 프로젝트 생성시 앱의 최소 버전을 12이하로 설정하는 법에 대해 적어보겠습니다.

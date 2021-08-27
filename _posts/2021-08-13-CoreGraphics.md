@@ -4,6 +4,11 @@ title:  "[iOS] Quartz 2D"
 date:   2021-08-13 2:54:50 +0900
 categories: iOS
 tags: [Core Graphics, quartz]
+toc: true
+toc_sticky: true
+header:
+  overlay_image: /images/background3.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 이번 포스팅에서는 iOS의 Core Graphics의 기반이 되는 Drawing engine인 Quartz 2D에 대해서 살펴보겠습니다.

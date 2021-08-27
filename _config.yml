@@ -24,7 +24,7 @@ description              : "An amazing website."
 url                      : "https://babywalnut.github.io"
 baseurl                  : "/my-blog"
 repository               : "Babywalnut/bobby-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/logo/bobbylogo.png"
+teaser                   : ""
 logo                     : "/assets/logo/bobbylogo.png"
 masthead_title           : ""
 # breadcrumbs            : false # true, false (default)

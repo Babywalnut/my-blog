@@ -4,6 +4,11 @@ title:  "[iOS] 동시성 프로그래밍"
 date:   2021-04-27 10:52:50 +0900
 categories: iOS
 tags: [ Swift API GuideLines ]
+toc: true
+toc_sticky: true
+header:
+  overlay_image: /images/background3.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 ## **동시성 과 앱디자인**

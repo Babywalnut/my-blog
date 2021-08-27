@@ -30,6 +30,11 @@ body {
           flex-direction: column;
 }
 
+.home-title {
+  text-shadow: 1px 1px 5px #000;
+  text-align: center;
+}
+
 .initial-content,
 .search-content {
   flex: 1 0 auto;
@@ -206,6 +211,7 @@ body {
 
     .page__title {
       font-size: $type-size-2;
+      // background-color: black;
 
       @include breakpoint($small) {
         font-size: $type-size-1;

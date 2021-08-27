@@ -4,6 +4,11 @@ title:  "[iOS] AppDelegate & SceneDelegate"
 date:   2021-06-15 2:52:50 +0900
 categories: iOS
 tags: [iOS, AppDelegate, SceneDelegate, lifeCycle, 생명주기]
+toc: true
+toc_sticky: true
+header:
+  overlay_image: /images/background3.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 이번 포스팅에서는 AppDelegate 와 iOS13, ios 11 이후 등장한 SceneDelegate에 대해서 다뤄보겠습니다

@@ -4,6 +4,11 @@ title:  "[Swift]Swift API GuideLines (part 1)"
 date:   2021-03-07 10:52:50 +0900
 categories: 스위프트
 tags: [Swift API GuideLines ]
+toc: true
+toc_sticky: true
+header:
+  overlay_image: /images/swiftcode.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 ### **Swift API GuideLines?**

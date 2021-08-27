@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title:  "[iOS] Quartz 2D"
 date:   2021-08-13 2:54:50 +0900
 categories: iOS

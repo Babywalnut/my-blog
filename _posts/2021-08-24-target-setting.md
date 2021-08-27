@@ -1,11 +1,14 @@
 ---
-layout: posts
+layout: single
 title:  "[iOS] Xcode 11에서 iOS 12 이하 버전 생성하기"
 date:   2021-08-24 2:54:50 +0900
+classes: wide
 categories: 
   - iOS
 tags: [Deployment target, xcode]
 ---
+
+
 
 ## **Deplyment Target 수정**
 
@@ -35,7 +38,8 @@ SceneDelegate는 iOS 13 이후 버전에 서 필요하므로 availability attrib
        }
     ```
 2. **AppDelegate.swift**
-AppDelegate에 선언되어 있는 메서드 중 두개의 메서든 SceneSession을 관리하는 메서드이므로 마찬가지로 각각 @available 를 추가해줍니다.
+AppDelegate에 선언되어 있는 메서드 중 두개의 메서드는 SceneSession을 관리하는 메서드입니다. 
+마찬가지로 각각 @available 를 추가해줍니다.
 ```swift
        // MARK: UISceneSession Lifecycle
        @available(iOS 13.0, *)

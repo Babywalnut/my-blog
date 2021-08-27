@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title:  "[iOS] AppDelegate & SceneDelegate"
 date:   2021-06-15 2:52:50 +0900
 categories: iOS

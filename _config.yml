@@ -20,11 +20,11 @@ title                    : "Babywalnut"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Bobby"
-description              : "An amazing website."
+description              : "바비의 개발블로그."
 url                      : "https://babywalnut.github.io"
 baseurl                  : "/my-blog"
 repository               : "Babywalnut/bobby-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : ""
+teaser                   : "/assets/logo/bobby_logo.png"
 logo                     : "/assets/logo/bobbylogo.png"
 masthead_title           : ""
 # breadcrumbs            : false # true, false (default)

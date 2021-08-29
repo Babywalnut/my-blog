@@ -20,7 +20,7 @@ header:
 
 iOS 12 이후부터는 앱의 생명주기와 UI의 생명주기가 달라지므로 더 낮은 버전을 사용하고 싶을 때는 수정해줘야 하는 부분이 있습니다. 
 
-생명주기에 대해서는  <a href ="https://babywalnut.github.io/my-blog/ios/AppDelegate-SceneDelegate/" style="color:gray"><U>[iOS] AppDelegate & SceneDelegate</U></a>에서 확인하시면 됩니다.
+생명주기에 대한 자세한 정보는  <a href ="https://babywalnut.github.io/my-blog/ios/AppDelegate-SceneDelegate/" style="color:gray"><U>[iOS] AppDelegate & SceneDelegate</U></a>에서 확인하시면 됩니다.
 
 
 ## **Deplyment Target 수정**
@@ -72,4 +72,9 @@ AppDelegate에 선언되어 있는 메서드 중 두개의 메서드는 SceneSes
        	var window: UIWindow?
        }
 ```
-   
+
+<br><br>
+## **Before I finish** 
+이 글을 쓰는 시점에서는 여전히 많은 앱들이 iOS 12이하 버전을 지원하고 있습니다. 물론 이후에는 더이상 예전의 생명주기를 설정해주지 않을 날도 오겠지만 또 다른 생명주기를 사용할 수도 있기 때문에 조금더 해당 설정을 편리하게 설정할 수 있으면 더 좋지 않을까하는 생각이 들었습니다 😂 
+
+이상 포스팅을 마치겠습니다.🙈

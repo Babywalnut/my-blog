@@ -1,5 +1,4 @@
 ---
-layout: single
 title:  "[iOS] Xcode 11에서 iOS 12 이하 버전 생성하기"
 date:   2021-08-24 2:54:50 +0900
 categories: 

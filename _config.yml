@@ -23,7 +23,7 @@ name                     : "Bobby"
 description              : "바비의 개발블로그."
 url                      : "https://babywalnut.github.io"
 baseurl                  : "/my-blog"
-repository               : "Babywalnut/bobby-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : ""
 logo                     : "/assets/logo/bobbylogo.png"
 masthead_title           : ""
@@ -153,7 +153,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -291,3 +290,9 @@ defaults:
       comments: true # true
       share: true
       related: true
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true

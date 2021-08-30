@@ -24,7 +24,7 @@ description              : "바비의 개발블로그."
 url                      : "https://babywalnut.github.io"
 baseurl                  : "/my-blog"
 repository               : "Babywalnut/bobby-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/logo/bobby_logo.png"
+teaser                   : ""
 logo                     : "/assets/logo/bobbylogo.png"
 masthead_title           : ""
 # breadcrumbs            : false # true, false (default)

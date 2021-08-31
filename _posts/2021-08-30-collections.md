@@ -9,7 +9,7 @@ header:
   overlay_image: /images/hig.png
 ---
 
-이번 포스팅에서는 `Human Interface Guidelines > Views > Collections`를 번역해보겠습니다.
+이번 포스팅에서는 `Human Interface Guidelines > Views > Collections`문서를 직접 번역해보겠습니다.
 
 <span style="color:gray">참고자료 : <br></span><a href ="https://developer.apple.com/design/human-interface-guidelines/ios/views/collections/" style="color:darkgreen"><U>Collections</U></a>
 
@@ -32,7 +32,7 @@ collection 내부에서는 아이템이 추가되거나 삭제되거나 다시 �
 
 
 <br>
-**기본적인 행이나 그리드 레이아웃으로 충부한 경우인데도 불구하고 틀자체를 바꾸는 새로운 디자인을 사용하는 것을 자제해야합니다.** collection은 사용자의 경험을 강조하기 때문에 관심을 끄는 핵심요소이기보다는 아이템을 고르는 행위자체를 편하게 하는데 목적을 둬야합니다.
+**기본적인 행이나 그리드 레이아웃으로 충분한 경우인데도 불구하고 틀자체를 바꾸는 새로운 디자인을 사용하는 것을 자제해야합니다.** collection은 사용자의 경험을 강조하기 때문에 관심을 끄는 핵심요소이기보다는 아이템을 고르는 행위자체를 편하게 하는데 목적을 둬야합니다.
 
 만약 collection내에서 아이템을 고르는 행위자체가 어려워진다면 사용자들은 당황하게되고 그들이 원하는 컨텐츠에 도달하기 이전에 흥미를 잃어버릴 것입니다. 적당한 너비의 패딩을 컨텐츠 둘레에 주어서 레이아웃이 깔끔하고 컨텐츠들간에 겹치는 현상을 방지해야 합니다.
 

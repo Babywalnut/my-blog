@@ -57,7 +57,7 @@ collection view의 데이터들은 묶어서 보여줄 수 있는 각각의 item
 <br>
 ## **Layout**
 
-`layout` 오브젝트는 collection view의 컨텐츠들을 시각적으로 정렬시키는 역할을 합니다. `UICollectionViewLayout`의 subclass인 layout 객체는 collection view 내부의 모든 cell과 부가적인 view들을 어떻게 모으고 배열시킬지를 정해줍니다. 
+`layout` 객체는 collection view의 컨텐츠들을 시각적으로 정렬시키는 역할을 합니다. `UICollectionViewLayout`의 subclass인 layout 객체는 collection view 내부의 모든 cell과 부가적인 view들을 어떻게 모으고 배열시킬지를 정해줍니다. 
 
 비록 layout이 모든 요소들의 위치를 정의해주지만 해당 작업과 관련된 view들에게 직접 적용시켜주지는 않고 정의된 위치정보들을 **collection view가** 화면에 보여지도록 관련 view들에게 적용시켜줍니다. 왜냐하면 cell과 부가적인 view들이 생성될 때 collection view와 datasource객체간에 관계를 가지고 있기 때문입니다. layout 객체는 item data대신에 시각적인 정보를 제공하는 것 외에는 다른 datasource와 다를게 없습니다.
 
@@ -83,4 +83,10 @@ queue에서 view를 빼오는 메서드는 두가지가 있습니다. 어떤 타
 - 위에서 언급했던 layout 객체를 통해 부가적인 view들을 요청할 때는 `dequeueReusableSupplementaryView(ofKind:withReuseIdentifier:for:)`을 사용합니다.
 
 <br>
-위의 두 메서드를 호출하기 전에 현재 존재하지 않는 불러올 view들을 어떤 방식으로 생성할 건지 collection vew에게 알려줘야합니다. 이를 위해 클래스 형태나 nib 파일 형태로 collection view에 등록해야만 합니다. 예를들어 cell들을 등록할 때 `register(_:forCellWithReuseIdentifier:)`메서드를 사용하여 클래스를 등록하거나 ` register(_:forCellWithReuseIdentifier:)`를 사용하여 nib 파일을 등록합니다. 등록 과정의 일부분으로써 view를 재사용할지 안할지를 reuse identifier을 식별해줍니다. 이 값은 나중에 dequeue과정에서도 사용되는 String타입의 파라미터입니다.
+위의 두 메서드를 호출하기 전에 현재 존재하지 않는 불러올 view들을 어떤 방식으로 생성할 건지 collection vew에게 알려줘야합니다. 이를 위해 클래스 형태나 nib 파일 형태로 collection view에 등록해야만 합니다. 예를들어 cell들을 등록할 때 `register(_:forCellWithReuseIdentifier:)`메서드를 사용하여 클래스를 등록하거나 `register(_:forCellWithReuseIdentifier:)`를 사용하여 nib 파일을 등록합니다. 등록 과정의 일부분으로써 view를 재사용할지 안할지를 reuse identifier을 식별해줍니다. 이 identifier는 나중에 dequeue과정에서도 사용되는 String타입의 파라미터입니다.
+
+<br>
+원하는 view를 datasource 메서드에서 올바르게 dequeue시켰다면 해당 view의 컨텐츠를 설정하고 collection view가 사용할 수 있도록 반환해주어야 합니다. 위에서 언급하였듯이 layout객체로부터 layout정보를 받았다면 collection view는 해당 view를 화면에 보이도록 적용시킬 것입니다.
+
+
+

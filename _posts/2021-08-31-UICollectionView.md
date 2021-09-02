@@ -10,7 +10,7 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
-이전 포스팅에서는 HIG의 Collections를 통해 Collection의 올바른 사용예시와 주의해야할 점에 대해서 보았습니다. <a href ="https://developer.apple.com/documentation/uikit/uicollectionview" style="color:gray"><U>Collections(이전 포스팅)</U></a>
+이전 포스팅에서는 HIG의 Collections를 통해 Collection의 올바른 사용예시와 주의해야할 점에 대해서 보았습니다. <a href ="https://babywalnut.github.io/my-blog/hig/collections/" style="color:gray"><U>Collections(이전 포스팅)</U></a>
 
 이번 포스팅에서는 애플 공식문서의 UICollectionView를 직접 번역해보겠습니다.
 

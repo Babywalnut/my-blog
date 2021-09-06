@@ -6,6 +6,7 @@ tags: [Collections, CollectionView]
 toc: true
 toc_sticky: true
 header:
+  teaser: /images/hig.png
   overlay_image: /images/hig.png
 ---
 

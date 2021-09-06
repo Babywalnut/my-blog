@@ -11,7 +11,7 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
-이번 포스팅에서는 AppDelegate 와 iOS13, ios 11 이후 등장한 SceneDelegate에 대해서 다뤄보겠습니다
+이번 포스팅에서는 AppDelegate 와 iOS 13, Xcode 11 이후 등장한 SceneDelegate에 대해서 다뤄보겠습니다
 
 <span style="color:gray">참고자료 : <br></span><a href ="https://medium.com/@kalyan.parise/understanding-scene-delegate-app-delegate-7503d48c5445" style="color:darkgreen"><U>Understanding Scene Delegate & App Delegate</U></a><br>
 <a href ="https://learnappmaking.com/scene-delegate-app-delegate-xcode-11-ios-13/" style="color:darkgreen"><U>Scene Delegate vs. App Delegate Explained</U></a><br>

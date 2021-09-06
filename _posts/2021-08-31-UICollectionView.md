@@ -6,6 +6,7 @@ tags: [UICollectionView, CollectionView]
 toc: true
 toc_sticky: true
 header:
+  teaser: /images/background3.jpg
   overlay_image: /images/background3.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---

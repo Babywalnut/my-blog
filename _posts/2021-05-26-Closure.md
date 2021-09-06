@@ -8,6 +8,7 @@ toc: true
 toc_sticky: true
 header:
   overlay_image: /images/swiftcode.jpg
+  teaser: /images/swiftcode.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
